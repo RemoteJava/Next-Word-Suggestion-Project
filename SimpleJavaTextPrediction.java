@@ -17,19 +17,34 @@ public class SimpleJavaTextPrediction {
         String input2 = "sounds";
         String input3 = "if";
         Scanner myObj = new Scanner(System.in);
-        System.out.println("Enter a word: ");
+        System.out.println("Enter one of three words: to, sounds, or if: ");
+        String s = myObj.nextLine();
 
-        boolean[] phrasesToList = new boolean[0];
+        List<String> list1 = new ArrayList<>();
+        list1.add("you");
+        list1.add("me");
+        list1.add("do");
+        list1.add("be");
+        list1.add("your");
+        list1.add("try");
+        List<String> list2 = new ArrayList<>();
+        list2.add("amazing");
+        list2.add("great");
+        list2.add("fun");
+        list2.add("cool");
+        List<String> list3 = new ArrayList<>();
+        list3.add("you");
+        list3.add("he");
+        list3.add("that");
+        list3.add("we");
+        list3.add("it");
 
-
-
-        for(int i = 0; i < phrasesToList.length; i++){
-            String s = myObj.next();
-            System.out.println(phrasesToList[i]);
-
-
-
-            }
+        if (Objects.equals(s, input1))
+            System.out.println(list1);
+        if (Objects.equals(s, input2))
+            System.out.println(list2);
+        if (Objects.equals(s, input3))
+            System.out.println(list3);
         }
 
     public static String[] generatePredictedText(String input, String in, String input3, boolean caseSensitive) {
